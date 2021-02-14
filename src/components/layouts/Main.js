@@ -33,7 +33,7 @@ const Main = () => {
         caption: '',
         url: '',
       });
-      const res = await axios.get('/memes');
+      const res = await axios.get('https://x-meme-app-10.herokuapp.com/memes');
 
       setMemeState({
         memeData: res.data,
