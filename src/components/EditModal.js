@@ -89,7 +89,7 @@ const EditModal = ({
     <>
       <Modal size='lg' centered show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title>Edit Meme</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <form onSubmit={(e) => handleUpdate(e)}>
