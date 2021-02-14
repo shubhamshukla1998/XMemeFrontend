@@ -57,7 +57,11 @@ const EditModal = ({
 
       const body = JSON.stringify(updMeme);
 
-      const res = await axios.patch(`/memes/${formData._id}`, body, config);
+      const res = await axios.patch(
+        `https://x-meme-app-10.herokuapp.com/memes/${formData._id}`,
+        body,
+        config
+      );
       console.log(res);
       if (res.status === 204) {
         console.log('meme updated successfully');

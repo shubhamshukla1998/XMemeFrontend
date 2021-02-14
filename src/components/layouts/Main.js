@@ -70,7 +70,11 @@ const Main = () => {
 
       const body = JSON.stringify(newMeme);
 
-      const res = await axios.post('/memes', body, config);
+      const res = await axios.post(
+        'https://x-meme-app-10.herokuapp.com/memes',
+        body,
+        config
+      );
 
       if (res.status === 200) {
         setToastData({
