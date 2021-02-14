@@ -1,38 +1,41 @@
-.App {
-  text-align: center;
+img {
+  height: 200px;
+  width: 100%;
+  object-fit: fill;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.dark-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card-form {
+  opacity: 0.9;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* .form-control::placeholder {
+  color: #bbb !important;
+} */
+
+.meme-card {
+  box-shadow: 0 4px 20px rgb(0 0 0 / 50%);
+  border-radius: 6px;
+  margin: 5px 0;
 }
 
-.App-link {
-  color: #61dafb;
+.meme-header {
+  font-style: italic;
+  font-family: cursive;
+  font-weight: bold;
+  font-size: large;
+  text-decoration: underline;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.meme-caption {
+  font-size: medium;
+  font-family: system-ui;
 }
