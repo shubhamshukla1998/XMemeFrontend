@@ -10,20 +10,21 @@ const DisplayMeme = ({ data, updFormData, setToastData, toastData }) => {
   //  let clickedIdx = 0;
   const handleClose = () => setShow(false);
   const handleShow = (e) => {
-    setIdx(e.target.value);
+    // if (e.target.parentElement.value == 'button') console.log('True');
+    setIdx(e.target.value || e.target.parentElement.value);
 
-    console.log(clickedIdx);
+    //console.log(e.target.value);
     setShow(true);
   };
 
   return (
     <div
-      className='row mt-2'
-      style={{ maxHeight: '25rem', overflow: 'scroll' }}
+      className='row mt-2 '
+      style={{ maxHeight: '28rem', overflow: 'scroll' }}
     >
       {data.map((item, i) => (
-        <div className='col col-lg-3 col-md-4' key={i}>
-          <div className='card meme-card' style={{ width: '14rem' }}>
+        <div className='col col-lg-3 col-md-4 col-sm-6 ' key={i}>
+          <div className='card meme-card' style={{ width: '20rem' }}>
             <div className='class-header meme-header text-center'>
               {item.name}
             </div>
@@ -40,11 +41,15 @@ const DisplayMeme = ({ data, updFormData, setToastData, toastData }) => {
             <div className='card-body'>
               <h5 className='card-title meme-caption'>{item.caption}</h5>
               <Button
-                variant='warning'
+                variant='primary'
                 onClick={(e) => handleShow(e)}
                 value={i}
               >
-                Edit
+                <i
+                  className='fas fa-edit'
+                  // onClick={(e) => handleShow(e)}
+                  // value={i}
+                ></i>
               </Button>
             </div>
           </div>

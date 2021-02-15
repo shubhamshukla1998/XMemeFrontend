@@ -3,6 +3,7 @@ import axios from 'axios';
 import DisplayMeme from './DisplayMeme';
 import Form from './Form';
 import Toasts from './../Toasts';
+import { Spinner } from 'react-bootstrap';
 
 const Main = () => {
   const [formData, setFormData] = useState({
@@ -111,7 +112,7 @@ const Main = () => {
   }, []);
 
   return (
-    <div className='container'>
+    <div className='ml-5 mr-5'>
       <Form
         formData={formData}
         handleChange={handleChange}
@@ -119,7 +120,9 @@ const Main = () => {
       />
       <Toasts toastData={toastData} setToastData={setToastData} />
       {memeState.loading === true ? (
-        <p>Loading....</p>
+        <div className='text-center'>
+          <Spinner animation='border' variant='primary' />
+        </div>
       ) : (
         <DisplayMeme
           data={memeState.memeData}

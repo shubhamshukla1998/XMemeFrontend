@@ -9,8 +9,8 @@ const Toasts = ({ toastData, setToastData }) => {
       onClose={() => setToastData({ ...toastData, toastShow: false })}
       style={{
         position: 'absolute',
-        top: '13%',
-        right: '13%',
+        top: '25%',
+        right: '8%',
         zIndex: '9999',
       }}
       show={toastShow}
